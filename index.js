@@ -16,12 +16,12 @@ class Limiter {
     return this.client.multi([
       [commands[0], `${this.prefix}:${this.amount}:${this.period}`, 0, 'px', this.period, 'nx'],
       [commands[1], `${this.prefix}:${this.amount}:${this.period}`],
-      [commands[2], `${this.prefix}:${this.amount}:${this.period}`],
+      [commands[2], `${this.prefix}:${this.amount}:${this.period}`]
     ]).exec().then(results => {
       return {
         allow: results[1][1] <= this.amount,
         count: results[1][1],
-        reset: results[2][1],
+        reset: results[2][1]
       }
     })
   }

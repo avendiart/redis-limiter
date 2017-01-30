@@ -40,7 +40,7 @@ class Limiter {
       amount,
       period,
       prefix,
-      client,
+      client
     )
   }
 }

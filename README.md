@@ -14,7 +14,7 @@ const config = {
   })
 }
 
-const limiter = require('@pligasov/limiter').create(
+const limiter = require('@pilgasov/limiter').create(
   config.amount,
   config.period,
   config.prefix,
